@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015. Peter Chapman.
+ * Copyright (c) 2015 Peter Chapman.
  * Please see the file LICENCE.md for licence details.
  */
 package nz.co.conglomo.nzwalks;
