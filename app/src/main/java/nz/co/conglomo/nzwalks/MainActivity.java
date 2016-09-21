@@ -21,6 +21,7 @@ import com.google.android.gms.maps.model.UrlTileProvider;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Locale;
 
 /**
  * The main activity.
@@ -40,7 +41,7 @@ public class MainActivity extends FragmentActivity {
         public URL getTileUrl(int x, int y, int zoom) {
 
             /* Define the URL pattern for the tile images */
-            String s = String.format("https://nzwalks.azurewebsites.net/geoserver/gwc/service/gmaps?zoom=%d&x=%d&y=%d&format=image/png&layers=doc_tracks:doc-tracks&srs=EPSG:3857", zoom, x, y);
+            String s = String.format(Locale.US, "https://nzwalks.azurewebsites.net/geoserver/gwc/service/gmaps?zoom=%d&x=%d&y=%d&format=image/png&layers=doc_tracks:doc-tracks&srs=EPSG:3857", zoom, x, y);
             try {
                 return new URL(s);
             } catch (MalformedURLException e) {
